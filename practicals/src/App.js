@@ -1,29 +1,29 @@
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
 import './App.css';
-// import Claro from './Claro';
-// import TextReader from './TextReader';
+import About from './components/About';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
 import Login from './login';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div>{<Login></Login>}</div>
-        {/* <div>
-          {<UseEffectHook></UseEffectHook>}
-        </div>
-        <div>
-          {<ChildComp name="Yash" city="Pune"></ChildComp>}
-        </div>
-          <div>
-            {<Week></Week>}
-          </div>
-          
-          <p>{<FruitBat></FruitBat>}</p>
-
-          <p>{<Uppercase name="yash"></Uppercase>}</p>
-
-          <p>{<FruitMerge></FruitMerge>}</p> */}
-      </header>
+      
+      <div>
+        <Router>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/about' element={<About/>}></Route>
+            <Route path='*' element={<h1>404 error page not found</h1>}></Route>
+          </Routes>
+        </Router>
+      </div>
+      
+      <hr/>
+      <div>{<Login></Login>}</div>
     </div>
   );
 }
