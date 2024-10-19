@@ -1,19 +1,14 @@
 import './App.css';
 // import Claro from './Claro';
 // import TextReader from './TextReader';
-import ChildComp from './ChildComp';
-import FruitBat from './FruitBat';
-import FruitMerge from './FruitMerge';
-import Uppercase from './Uppercase';
-import UseEffectHook from './useEffectHook';
-import Week from './Week';
+import Login from './login';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
-        <div>
+        <div>{<Login></Login>}</div>
+        {/* <div>
           {<UseEffectHook></UseEffectHook>}
         </div>
         <div>
@@ -27,13 +22,7 @@ function App() {
 
           <p>{<Uppercase name="yash"></Uppercase>}</p>
 
-          <p>{<FruitMerge></FruitMerge>}</p>
-        {/* <div>
-        <TextReader></TextReader>
-        </div>
-        <div>
-          {<Claro></Claro>}
-        </div> */}
+          <p>{<FruitMerge></FruitMerge>}</p> */}
       </header>
     </div>
   );
